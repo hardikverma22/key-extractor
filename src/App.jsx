@@ -1,15 +1,17 @@
 import { useState } from "react";
-
-import "./App.css";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { dangerToast, warningToast, successCopiedToast } from "./customToast";
-import Keywords from "./Keywords";
-import Presentation from "./presentation";
-import { AiOutlineLoading3Quarters } from "react-icons/ai";
-import { apiErrorMessage, wrongInputMessage } from "./constant";
 import axios from "axios";
-import { data } from "autoprefixer";
+import "./App.css";
+
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
+
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+import Keywords from "./Keywords";
+import Presentation from "./Presentation";
+
+import { apiErrorMessage, wrongInputMessage } from "./constant";
+import { dangerToast, successCopiedToast, warningToast } from "./customToast";
 
 const App = () => {
   const [text, setText] = useState("");
@@ -28,7 +30,6 @@ const App = () => {
           inputText: text,
         })
         .then((response) => {
-          console.log(response);
           const data = response.data;
 
           if (data.statusCode == 200) {
