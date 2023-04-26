@@ -65,17 +65,17 @@ const App = () => {
     <>
       <section
         className="w-full 
-                min-h-screen 
+                md:min-h-screen h-screen
                 bg-gradient-to-b from-purple-500 to-purple-900 
-                flex flex-col justify-center items-center gap-10
+                flex flex-col justify-center items-center lg:gap-10 gap-5
                 text-white
-                px-20 py-10"
+                sm:px-20 px-10 py-10"
       >
         <Presentation />
 
         <div
           className="w-full 
-                  md:w-[50%]
+                  lg:w-[50%]
                   flex flex-col gap-5"
         >
           {keywords && keywords.length == 0 && (
